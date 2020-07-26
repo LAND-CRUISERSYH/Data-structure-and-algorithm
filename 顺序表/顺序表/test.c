@@ -16,6 +16,7 @@ void InitList(SqList *p);              //初始化顺序表
 int main()
 {
 	//SqList L;                   //创建一个顺序表
+	printf("hello world");
 	return 0; 
 }
 
