@@ -30,10 +30,8 @@ int main()
 	str S, T;
 	printf("请输入第一个字符串: ");
 	gets(S.ch);
-	getchar();
 	printf("请输入第二个字符串: ");
 	gets(T.ch);
-	getchar();
 	S.length = strlen(S.ch) - 1;
 	T.length = strlen(T.ch) - 1;
 	printf("位置下标为: %d\n", Index_BF(S, T));
