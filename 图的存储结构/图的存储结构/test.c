@@ -54,3 +54,8 @@ void CreateUDN(AMGraph *G)                        //采用邻接矩阵表示法创建无向网
 		G->arcs[j][i] = G->arcs[i][j];                         //对应对称权值也设为w
 	}
 }
+
+int main()
+{
+
+}
