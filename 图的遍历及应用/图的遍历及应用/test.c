@@ -64,6 +64,26 @@ void DFS(AMGraph G,int *visited, int v)                       //Í¼GÎªÁÚ½Ó¾ØÕóÀàĞ
 	}
 }
 
+void BFS(AMGraph G, int *visited, int v)                       //°´¹ã¶ÈÓÅÏÈ·Çµİ¹é±éÀúÁ¬Í¨Í¼G
+{
+	printf("%c", G.vexs[v]);                                         //·ÃÎÊµÚv¸ö¶¥µã
+	visited[v] = 1;                                                        //½«¸¨ÖúÊı×évµÄÎ»ÖÃÉèÎª1
+	InitQueue(Q);                                                         //¸¨Öú¶ÓÁĞQ³õÊ¼»¯ÖÃ¿Õ
+	EnQueue(Q, v);                                                      //vÈë¶Ó
+	while (!QueueEmpty(Q))                                         //¶ÓÁĞ·Ç¿Õ
+	{
+		DeQueue(Q,u);                                                     //¶ÓÍ·ÔªËØ³ö¶Ó²¢ÖÃÎªu
+		for (int w = FirstAdjVex(G, u); w >= 0; w = NextAdjVex(G, u, w))
+		{
+			if (!visited[w]) {                                   //wÎªuµÄÉĞÎ´·ÃÎÊµÄÁÚ½Ó¶¥µã
+				printf("%c", w);                                       
+				visited[w] = 1;
+				EnQueue(Q, w);                                       //wÈë¶Ó
+			}
+		}
+	}
+}
+
 int main()
 {
 	return 0;
