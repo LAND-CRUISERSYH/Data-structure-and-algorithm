@@ -36,13 +36,13 @@ typedef struct
 //		return 0;
 //}
 
-int Search_Seq(SSTable ST, Keytype key)                  //加哨兵的形式
-{
-	ST.R[0].key = key;
-	int i = ST.length;
-	for (i = ST.length; ST.R[i].key != key; i--);
-	return i;
-}
+//int Search_Seq(SSTable ST, Keytype key)                  //加哨兵的形式
+//{
+//	ST.R[0].key = key;
+//	int i = ST.length;
+//	for (i = ST.length; ST.R[i].key != key; i--);
+//	return i;
+//}
 
 int main()
 {
