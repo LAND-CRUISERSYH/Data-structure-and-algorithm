@@ -98,7 +98,3 @@ BSTree SearchBST(BSTree T, KeyType key)                 //二叉排序树递归查找
 	else
 		return SearchBST(T->rchild, key);                     //在右子树中继续查找
 }
-int main()
-{
-
-}
